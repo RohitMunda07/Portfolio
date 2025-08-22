@@ -1,0 +1,8 @@
+/* global.css */
+:root {
+    --primary: #1e40af;
+    --secondary: #9333ea;
+    --background: #f9fafb;
+    --text: #111827;
+    --accent: oklch(59.625% 0.1976 256.454);
+}
