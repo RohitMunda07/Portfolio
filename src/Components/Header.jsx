@@ -17,7 +17,7 @@ export default function Header() {
 
     return (
         <div>
-            <section className='px-25 py-7 flex justify-between'>
+            <section className='px-25 py-7 flex justify-between backdrop-blur-xs fixed top-0 w-full z-50'>
                 <div className='nav_img'>
                     {/* <img src="" alt="" /> */}
                     <h1 ref={h1ref} className='uppercase font-anton text-xl font-semibold'>Its me Rohit</h1>

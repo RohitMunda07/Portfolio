@@ -1,17 +1,31 @@
 import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
-import React from 'react'
+import React, { useRef } from 'react'
+import Galaxy from '../Components/Galaxy'
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default function Hero() {
+    const heroRef = useRef()
     useGSAP(() => {
-        var t = gsap.timeline({ defaults: {
-
-        } })
-
+        gsap.to(heroRef.current, {
+            scale: 0,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: heroRef.current,  // ✅ Correct
+                scroller: "body",
+                start: "bottom 85%", // Start when bottom of hero hits center of viewport
+                end: "bottom top",
+                markers: true,
+                scrub: 2.5,
+            },
+        });
     })
+
     return (
-        <div className=''>
-            <section className='flex flex-col justify-center items-center w-full h-[89vh]'>
+        <div ref={heroRef} id='hero' className='card'>
+            <section className='flex flex-col justify-center items-center w-full'>
 
                 <h2 className="font-anton font-semibold text-8xl mt-[10rem]">
                     I'm a <span className="text-[var(--accent)]">Developer</span>

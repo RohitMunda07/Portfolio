@@ -1,14 +1,22 @@
 @import "tailwindcss";
 @import "./Fonts/Anton_Complete/Fonts/WEB/css/anton.css";
 
+html{
+  scroll-behavior: smooth;
+}
 
 @theme {
   --font-anton: "Anton-Regular", sans-serif;
 }
 
 body{
-  background-color: #111;
+  /* background-color: #111; */
+  overflow-x: hidden;
   color: white;
+}
+
+a[title="Built with Spline"] {
+  display: none !important;
 }
 
 /* 

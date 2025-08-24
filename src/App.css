@@ -31,6 +31,17 @@ button {
   transition: 0.3s;
 }
 
+.card{
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav_items li a:hover::after {
   width: 100%;
 }
